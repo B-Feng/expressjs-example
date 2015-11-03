@@ -2,6 +2,20 @@ var idGenerator = require('./id_generator.js');
 
 var UserStore = function() {
 	this.users = {};
+
+	// Pre-initialized store with fake users
+
+	this.users["1234"] =   {
+	    "id": "1234",
+	    "name": "John Doe",
+	    "email": "jdoe3@gmail.biz"
+  	};
+
+	this.users["1235"] =   {
+	    "id": "1235",
+	    "name": "Blake Griffin",
+	    "email": "bgriffin@gmail.biz"
+  	};
 };
 
 UserStore.prototype.getAll = function(callback) {
